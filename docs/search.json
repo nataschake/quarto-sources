@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "presentation.html#ontotext-reveal.js-presentation",
+    "href": "presentation.html#ontotext-reveal.js-presentation",
+    "title": "Great presentations",
+    "section": "2.1 Ontotext reveal.js presentation",
+    "text": "2.1 Ontotext reveal.js presentation\n\nWhat we have up to now (@ Nikola Tulechki 2018)List of issues accumulated so far"
+  },
+  {
+    "objectID": "presentation.html#table-styles",
+    "href": "presentation.html#table-styles",
+    "title": "Great presentations",
+    "section": "3.1 Table styles",
+    "text": "3.1 Table styles\nTables can be markdown-style and quarto-style.\nMarkdown:\n| Default | Left | Right | Center |\n|---------|:-----|------:|:------:|\n| 12      | 12   |    12 |   12   |\n| 123     | 123  |   123 |  123   |\n| 1       | 1    |     1 |   1    |\n\nQuarto-style:\n::::{.columns}\n::: {.column width=\"30%\"}\n&lt;div class=\"right-centered-text\"&gt;![](./img/big-picture.png)&lt;/div&gt;\n:::\n::: {.column width=\"70%\"}\nTasks: [SOL-50](https://ontotext.atlassian.net/browse/SOL-50), \n[SOL-51](https://ontotext.atlassian.net/browse/SOL-51)\n\nMore text goes here...\n:::\n::::"
+  },
+  {
+    "objectID": "presentation.html#quarto-columns-image-should-resize-when-column-is-resized-sol-50-sol-51",
+    "href": "presentation.html#quarto-columns-image-should-resize-when-column-is-resized-sol-50-sol-51",
+    "title": "Great presentations",
+    "section": "3.2 Quarto columns: image should resize when column is resized (SOL-50, SOL-51)",
+    "text": "3.2 Quarto columns: image should resize when column is resized (SOL-50, SOL-51)\n\n\n\n\n\n\nTasks: SOL-50, SOL-51: when you change the column widths in .qmd file, the image size should change accordingly. Not animated, the task is just to be able to reuse one image without tuning width.\n\nCurrent solution is: adjust the column widths to see the whole picture without any scale. E.g., these image and text are perfectly seen with column widths 30/70, whereas column widths 50/50 will require adding {width=70%} (or other) to ![](./img/big-picture.png)\n\n::::{.columns}\n::: {.column width=\"30%\"}\n&lt;div class=\"centered-text\"&gt;\n![](./img/big-picture.png)&lt;/div&gt;\n:::\n::: {.column width=\"70%\"}\ntext goes here\n:::\n::::"
+  },
+  {
+    "objectID": "presentation.html#quarto-columns-current-solution-to-sol-50-sol-51",
+    "href": "presentation.html#quarto-columns-current-solution-to-sol-50-sol-51",
+    "title": "Great presentations",
+    "section": "3.3 Quarto columns: current solution to SOL-50, SOL-51",
+    "text": "3.3 Quarto columns: current solution to SOL-50, SOL-51\n\n\n\n\n\n\n\nTasks: SOL-50, SOL-51\n\n::::{.columns}\n::: {.column width=\"50%\"}\n&lt;div class=\"centered-text\"&gt;\n![](./img/big-picture.png){width=60%}&lt;/div&gt;\n:::\n::: {.column width=\"50%\"}\n&lt;div class=\"right-centered-text\"&gt;\nTasks: [SOL-50](https://ontotext.atlassian.net/browse/SOL-50), \n[SOL-51](https://ontotext.atlassian.net/browse/SOL-51)\n&lt;/div&gt;\nImportant: Ctrl + Left mouse button click enlarges a picture / returns to a regular view."
+  },
+  {
+    "objectID": "presentation.html#i-need-to-render-a-table-with-28-lines",
+    "href": "presentation.html#i-need-to-render-a-table-with-28-lines",
+    "title": "Great presentations",
+    "section": "3.4 I need to render a table with 28 lines",
+    "text": "3.4 I need to render a table with 28 lines\n\nuse {.scrollable .smaller} in a slide title markdown or scrollable: true smaller: true in _metadata.yml\n\nthe minus is that the header of the table is scrollable as well, so when we see last rows of the table, we don’t see the table header.\n\n\n\n\n\nTable\n\n\n\n\n1\n\n\n2\n\n\n3\n\n\n4\n\n\n5\n\n\n6\n\n\n7\n\n\n8\n\n\n9\n\n\n10\n\n\n11\n\n\n12\n\n\n13\n\n\n14\n\n\n15\n\n\n16\n\n\n17\n\n\n18\n\n\n19\n\n\n20\n\n\n21\n\n\n22\n\n\n23\n\n\n24\n\n\n25\n\n\n26\n\n\n27\n\n\n28"
+  },
+  {
+    "objectID": "presentation.html#code-samples-use-triple-backticks",
+    "href": "presentation.html#code-samples-use-triple-backticks",
+    "title": "Great presentations",
+    "section": "4.1 Code samples use triple backticks",
+    "text": "4.1 Code samples use triple backticks\nUse markdown style:\n```...```\nor\n```language...```\n. SPARQL/TTL/PIE code will be in Ontotext-specific style:\nselect *\nwhere {\n    ?s ff-map:mentionsEntity ?entity.\n    ?entity a dbo:Place\n\n    service &lt;http://factforge.net/repositories/ff-news&gt;\n    { ?entity rdfs:label ?label }\n}\nGeneral purpose programing code blocks are also highlighted:\n# Store input numbers\nnum1 = input('Enter first number: ')\nnum2 = input('Enter second number: ')\n\n# Add two numbers\nsum = float(num1) + float(num2)\n\n# Display the sum\nprint('The sum of {0} and {1} is {2}'.format(num1, num2, sum))"
+  },
+  {
+    "objectID": "presentation.html#quarto-side-notes-and-footnotes",
+    "href": "presentation.html#quarto-side-notes-and-footnotes",
+    "title": "Great presentations",
+    "section": "4.2 Quarto side notes and footnotes",
+    "text": "4.2 Quarto side notes and footnotes\n\nWhen you have a main text and a side note, e.g. reference to a paper/project/etc., you can use Quarto-specific markdown. Side notes and footnotes do not have any numbering scheme.\n\n::: aside\n[Side note: reference to a paper](http://ebooks.iospress.nl/doi/10.3233/SSW200034)\n:::\n\n\nAlso it is possible to have a footnote in a traditional markdown. Here is a footnote reference,\n[^1]\nand another\n[^longnote]\n\n[^1]: Here is the footnote.\n[^longnote]: Here's one with multiple blocks.\n    Subsequent paragraphs are indented to show that they belong to the previous footnote.\n\n\n\nSide note: reference to a paper"
+  },
+  {
+    "objectID": "presentation.html#bare-links",
+    "href": "presentation.html#bare-links",
+    "title": "Great presentations",
+    "section": "4.3 Bare links",
+    "text": "4.3 Bare links\n\nIn Pandoc:\n\nmd_extension: +autolink_bare_uris\n\nIn Quarto:\n\nbare link is clickable: https://www.wikidata.org/wiki/Q1\nlink in the GitHub Markdown style [text](url) is clickable\nlink surrounded with &lt; &gt; is clickable: https://www.wikidata.org/wiki/Q1"
+  },
+  {
+    "objectID": "presentation.html#i-have-a-very-long-list-25-rows",
+    "href": "presentation.html#i-have-a-very-long-list-25-rows",
+    "title": "Great presentations",
+    "section": "5.1 I have a very long list (25 rows)",
+    "text": "5.1 I have a very long list (25 rows)\nUse {.smaller} in a slide title markdown or scrollable: true smaller: true in _metadata.yml\n1. Far far away, \n2. behind the word mountains,\n3. far from the countries Vokalia and Consonantia,\n4. there live the blind texts\n5. Separated they live \n6. in Bookmarksgrove right at the coast of the Semantics,\n7. a large language ocean.\n8. A small river named Duden\n9. flows by their place \n10. and supplies it with the necessary regelialia.\n11. It is a paradisematic country, \n12. in which roasted parts of sentences\n13. fly into your mouth.\n14. Even the all-powerful Pointing\n15. has no control about the blind texts\n16. it is an almost unorthographic life.\n17. One day however\n18. a small line of blind text\n19. by the name of Lorem Ipsum\n20. decided to leave for the far World of Grammar.\n21. The Big Oxmox \n22. advised her not to do so, \n23. because there were thousands of bad Commas,\n24. wild Question Marks\n25. and devious Semikoli\n26. but the Little Blind Text didn’t listen."
+  },
+  {
+    "objectID": "presentation.html#i-have-a-lengthy-header-to-describe-things-in-all-details-also-variable-names-throughout-the-text-must-be-colored",
+    "href": "presentation.html#i-have-a-lengthy-header-to-describe-things-in-all-details-also-variable-names-throughout-the-text-must-be-colored",
+    "title": "Great presentations",
+    "section": "5.2 I have a lengthy header, to describe things in all details, also variable names throughout the text must be colored",
+    "text": "5.2 I have a lengthy header, to describe things in all details, also variable names throughout the text must be colored"
+  },
+  {
+    "objectID": "presentation.html#code-blocks-can-be-25-lines-of-110-chars-code-in-sparql-turtle-and-pie-is-highlighted-turtle",
+    "href": "presentation.html#code-blocks-can-be-25-lines-of-110-chars-code-in-sparql-turtle-and-pie-is-highlighted-turtle",
+    "title": "Great presentations",
+    "section": "5.3 Code blocks can be 25 lines of 110 chars, code in sparql, turtle, and pie is highlighted: turtle",
+    "text": "5.3 Code blocks can be 25 lines of 110 chars, code in sparql, turtle, and pie is highlighted: turtle\ngr:Grant                    puml:stereotype \"(G,lightyellow)\" .\ngr:Researcher               puml:stereotype \"(R,lightgreen)\" .\ngr:Funder                   puml:stereotype \"(F,lightgreen)\" .\n&lt;funder/(ADMINISTERING_IC)&gt; puml:stereotype \"(A,lightgreen)\" .\ngr:Grantee                  puml:stereotype \"(G,lightgreen)\" .\ngr:GranteeDepartment        puml:stereotype \"(D,lightgreen)\" .\ngr:Funding                  puml:stereotype \"($,yellow)\" .\ngr:Address                  puml:stereotype \"(A,lightgreen)\" .\ngr:Project                  puml:stereotype \"(P,violet)\" .\ngr:ProjectYear              puml:stereotype \"(Y,violet)\" .\ngr:SubProject               puml:stereotype \"(S,violet)\" .\nskos:Concept                puml:stereotype \"(C,lightblue)\" .\nskos:ConceptScheme          puml:stereotype \"(S,lightblue)\" .\ngr:project                  puml:arrow puml:up.\ngr:projectYear              puml:arrow puml:up.\ngr:subProject               puml:arrow puml:up.\ngr:activityType             puml:arrow puml:down-4.\ngr:applicationType          puml:arrow puml:down-4.\ngr:fundingMechanism         puml:arrow puml:down-4.\ngr:spendingCategory         puml:arrow puml:down-4.\ngr:studySection             puml:arrow puml:down-4.\nowl:sameAs                  puml:arrow puml:left-dashed-none.\n&lt;project/(CORE_PROJECT_NUM)/subProject/(SUBPROJECT_ID)&gt; puml:left &lt;project/(CORE_PROJECT_NUM)/projectYear/(FULL_PROJECT_NUM)&gt;.\ngr:outcomeClinicalTrial   a puml:InlineProperty.\ngr:outcomePatent          a puml:InlineProperty.\ngr:outcomePublication     a puml:InlineProperty.\nrdfs:seeAlso              a puml:InlineProperty.\n\n\nWorst case of having voluminous code block and a side note"
+  },
+  {
+    "objectID": "presentation.html#code-blocks-can-be-25-lines-of-110-chars-code-in-sparql-turtle-and-pie-is-highlighted-sparql",
+    "href": "presentation.html#code-blocks-can-be-25-lines-of-110-chars-code-in-sparql-turtle-and-pie-is-highlighted-sparql",
+    "title": "Great presentations",
+    "section": "5.4 Code blocks can be 25 lines of 110 chars, code in sparql, turtle, and pie is highlighted: sparql",
+    "text": "5.4 Code blocks can be 25 lines of 110 chars, code in sparql, turtle, and pie is highlighted: sparql\nprefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nprefix tloimarine: &lt;http://www.ics.forth.gr/isl/ontology/iMarineTLO/&gt;\nprefix tloCore: &lt;http://www.ics.forth.gr/isl/ontology/MarineTLO/&gt;\nSELECT ?waterarea ?area_id ?subarea ?subarea_id ?division ?division_id ?subdivision ?subdivision_id ?subarea_id\nWHERE {\n ?waterarea rdf:type tloCore:BC15_Water_Area .\n ?waterarea tloCore:LC1_is_identified_by ?x.\n ?x tloimarine:assignedCode ?area_id .\n  OPTIONAL {\n    ?waterarea tloCore:LC27_has_section ?subarea .\n    ?subarea tloCore:LC1_is_identified_by ?y.\n    ?y tloimarine:assignedCode ?subarea_id .\n  }\n  OPTIONAL {\n    ?subarea tloCore:LC27_has_section ?division .\n    ?division tloCore:LC1_is_identified_by ?z.\n    ?z tloimarine:assignedCode ?division_id .\n  }\n  OPTIONAL {\n    ?division tloCore:LC27_has_section ?subdivision .\n    ?subdivision tloCore:LC1_is_identified_by ?w.\n    ?w tloimarine:assignedCode ?subdivision_id .\n  }\nFILTER (bound(?subarea_id) || bound(?division_id))\nFILTER (bound(?subdivision_id)) \n}\n\n25 lines of 112 chars"
+  },
+  {
+    "objectID": "presentation.html#code-blocks-can-be-with-triple-apostrophes-as-in-lucene-graphdb-connector-example-the-code-includes-or-.",
+    "href": "presentation.html#code-blocks-can-be-with-triple-apostrophes-as-in-lucene-graphdb-connector-example-the-code-includes-or-.",
+    "title": "Great presentations",
+    "section": "5.5 Code blocks can be with triple apostrophes, as in Lucene GraphDB connector example, the code includes ’’‘…’’’ or “““…”““.",
+    "text": "5.5 Code blocks can be with triple apostrophes, as in Lucene GraphDB connector example, the code includes ’’‘…’’’ or “““…”““.\nPREFIX luc: &lt;http://www.ontotext.com/connectors/lucene#&gt;\nPREFIX luc-index: &lt;http://www.ontotext.com/connectors/lucene/instance#&gt;\n\nINSERT DATA {\n    luc-index:my_index luc:createConnector '''\n{\n  \"types\": [\n    \"http://www.ontotext.com/example/wine#Wine\"\n  ],\n  \"fields\": [\n    {\n      \"fieldName\": \"grape\",\n      \"propertyChain\": [\n        \"http://www.ontotext.com/example/wine#madeFromGrape\",\n        \"http://www.w3.org/2000/01/rdf-schema#label\"\n      ]\n    },\n    {\n      \"fieldName\": \"sugar\",\n      \"propertyChain\": [\n        \"http://www.ontotext.com/example/wine#hasSugar\"\n      ],\n      \"analyzed\": false,\n      \"multivalued\": false\n    },\n    {\n      \"fieldName\": \"year\",\n      \"propertyChain\": [\n        \"http://www.ontotext.com/example/wine#hasYear\"\n      ],\n      \"analyzed\": false\n    }\n  ]\n}''' .\n}"
+  },
+  {
+    "objectID": "presentation.html#big-picture",
+    "href": "presentation.html#big-picture",
+    "title": "Great presentations",
+    "section": "5.6 Big picture",
+    "text": "5.6 Big picture\n\nThis image is set without ![](img/timeline.png){height=650px}."
+  },
+  {
+    "objectID": "presentation.html#sec-acknowledgements",
+    "href": "presentation.html#sec-acknowledgements",
+    "title": "Great presentations",
+    "section": "5.7 Acknowledgements",
+    "text": "5.7 Acknowledgements\nTable with 0 borders hosting company logos\n   \n\n\n\nDeveloped by\n\nhttps://ontotext.com/\n\n\nFunded by\n\nHorizon Europe https://accordproject.eu/ (101056973)\n\n\nPowered by\n\nhttps://graphdb.ontotext.com/\n\n\n\n\nhttps://platform.ontotext.com/semantic-objects/\n\n\nData from\n\nhttps://www.buildingsmart.org/users/services/buildingsmart-data-dictionary/\n\n\n\n\n\n\nQuarto Presentations with beautiful slide decks made by RevealJs\n\n\n\n\n\n\n \n\n\nTest Quarto Presentation Features"
+  }
+]
